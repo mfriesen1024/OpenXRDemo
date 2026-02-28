@@ -1,11 +1,25 @@
 [gd_scene format=3 uid="uid://bjrtf850l6ij2"]
 
 [ext_resource type="PackedScene" uid="uid://c1on1tsa3caa5" path="res://Model/Saber.glb" id="1_uftpl"]
+[ext_resource type="Script" uid="uid://byl0isvxcwfrf" path="res://Scripts/Dotnet/src/Object/Saber.cs" id="2_1i2rj"]
 
-[node name="Saber" unique_id=1752899289 instance=ExtResource("1_uftpl")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_uftpl"]
+size = Vector3(0.17320508, 5, 0.2)
 
-[node name="Blade" parent="Hilt" parent_id_path=PackedInt32Array(1452117598) index="0" unique_id=1930746342]
-transform = Transform3D(1, 0, 0, 0, 0.00999999, 0, 0, 0, 1, 0, 0, 0)
+[node name="Saber" unique_id=1124808625 instance=ExtResource("1_uftpl")]
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=220436323]
+[node name="Blade" parent="Hilt" parent_id_path=PackedInt32Array(944607645) index="0" unique_id=1626408523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="Hilt/Blade" index="0" unique_id=1936395595]
+script = ExtResource("2_1i2rj")
+saberID = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hilt/Blade/Area3D" index="0" unique_id=1849669542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+shape = SubResource("BoxShape3D_uftpl")
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=1902857100]
 autoplay = &"BladeAction"
+
+[connection signal="area_entered" from="Hilt/Blade/Area3D" to="Hilt/Blade/Area3D" method="OnTriggerEnter"]

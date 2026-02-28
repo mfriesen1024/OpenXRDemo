@@ -18,8 +18,11 @@ emission = Color(0.91, 0.20930003, 0.20930003, 1)
 
 [node name="Saber" unique_id=1752899289 instance=ExtResource("1_dheid")]
 
-[node name="Hilt" parent="." index="0" unique_id=1452117598]
+[node name="Hilt" parent="." index="0" unique_id=944607645]
 surface_material_override/0 = SubResource("StandardMaterial3D_rt8t8")
 
-[node name="Blade" parent="Hilt" index="0" unique_id=1930746342]
+[node name="Blade" parent="Hilt" index="0" unique_id=1626408523]
 surface_material_override/0 = SubResource("StandardMaterial3D_kp8wu")
+
+[node name="Area3D" parent="Hilt/Blade" index="0" unique_id=1936395595]
+saberID = 0
