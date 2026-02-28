@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://njqrxfpyw23j"]
+
+[ext_resource type="Script" uid="uid://bjrq0r7fijibl" path="res://Scripts/Dotnet/src/Core/Spawner.cs" id="1_gik5w"]
+
+[sub_resource type="Animation" id="Animation_23ptd"]
+resource_name = "Bla"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l42d4"]
+_data = {
+&"Bla": SubResource("Animation_23ptd")
+}
+
+[node name="Spawner" type="Node3D" unique_id=1398571445]
+script = ExtResource("1_gik5w")
+objects = Array[PackedScene]([])
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=886724666]
+deterministic = true
+libraries/ = SubResource("AnimationLibrary_l42d4")
+autoplay = &"Bla"

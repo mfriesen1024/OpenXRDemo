@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bb8rdvveb5oce"]
 
-[ext_resource type="Script" uid="uid://t5qsubrslry4" path="res://Scripts/GDScript/GM.gd" id="1_r150o"]
+[ext_resource type="Script" uid="uid://t5qsubrslry4" path="res://Scripts/GDScript/XRInit.gd" id="1_r150o"]
 [ext_resource type="PackedScene" uid="uid://bo504gqxy67w7" path="res://Model/Reimport/Saber-L.tscn" id="2_kln2b"]
+[ext_resource type="PackedScene" uid="uid://njqrxfpyw23j" path="res://Prefab/Spawner.tscn" id="2_rgh2o"]
 [ext_resource type="PackedScene" uid="uid://bjrtf850l6ij2" path="res://Model/Reimport/Saber-R.tscn" id="3_rgh2o"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r150o"]
@@ -18,6 +19,9 @@ tonemap_mode = 3
 
 [node name="Node" type="Node" unique_id=1351839141]
 script = ExtResource("1_r150o")
+
+[node name="Spawner" parent="." unique_id=1398571445 instance=ExtResource("2_rgh2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -32)
 
 [node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=711892617]
 
