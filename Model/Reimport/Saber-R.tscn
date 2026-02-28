@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bjrtf850l6ij2"]
+
+[ext_resource type="PackedScene" uid="uid://c1on1tsa3caa5" path="res://Model/Saber.glb" id="1_uftpl"]
+
+[node name="Saber" unique_id=1752899289 instance=ExtResource("1_uftpl")]
+
+[node name="Blade" parent="Hilt" parent_id_path=PackedInt32Array(1452117598) index="0" unique_id=1930746342]
+transform = Transform3D(1, 0, 0, 0, 0.00999999, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=220436323]
+autoplay = &"BladeAction"

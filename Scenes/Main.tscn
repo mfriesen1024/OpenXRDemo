@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bb8rdvveb5oce"]
 
 [ext_resource type="Script" uid="uid://t5qsubrslry4" path="res://Scripts/GDScript/GM.gd" id="1_r150o"]
+[ext_resource type="PackedScene" uid="uid://bo504gqxy67w7" path="res://Model/Reimport/Saber-L.tscn" id="2_kln2b"]
+[ext_resource type="PackedScene" uid="uid://bjrtf850l6ij2" path="res://Model/Reimport/Saber-R.tscn" id="3_rgh2o"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r150o"]
 
@@ -22,10 +24,16 @@ script = ExtResource("1_r150o")
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=173569009]
 
 [node name="XRController3D" type="XRController3D" parent="XROrigin3D" unique_id=1006845066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, -2)
 tracker = &"left_hand"
 
+[node name="Saber" parent="XROrigin3D/XRController3D" unique_id=1752899289 instance=ExtResource("2_kln2b")]
+
 [node name="XRController3D2" type="XRController3D" parent="XROrigin3D" unique_id=1034809561]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, -2)
 tracker = &"right_hand"
+
+[node name="Saber" parent="XROrigin3D/XRController3D2" unique_id=1405342367 instance=ExtResource("3_rgh2o")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=801517527]
 environment = SubResource("Environment_idj7w")
