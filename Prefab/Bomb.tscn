@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://baemrortkhf4r"]
+
+[ext_resource type="Script" uid="uid://wnb4g7mngktm" path="res://Scripts/Dotnet/src/Object/Bomb.cs" id="1_2yiww"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u8sba"]
+size = Vector3(0.75, 0.75, 0.75)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2yiww"]
+albedo_color = Color(0.15, 0.15, 0.15, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_qp7en"]
+material = SubResource("StandardMaterial3D_2yiww")
+
+[node name="Bomb" type="Node3D" unique_id=1260990678]
+script = ExtResource("1_2yiww")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=12443144]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=274938100]
+shape = SubResource("BoxShape3D_u8sba")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D" unique_id=18073666]
+mesh = SubResource("SphereMesh_qp7en")

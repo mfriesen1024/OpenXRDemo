@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://njqrxfpyw23j"]
 
 [ext_resource type="Script" uid="uid://bjrq0r7fijibl" path="res://Scripts/Dotnet/src/Core/Spawner.cs" id="1_gik5w"]
+[ext_resource type="PackedScene" uid="uid://mosvmm8j08v1" path="res://Prefab/BoxL.tscn" id="2_5jbfu"]
+[ext_resource type="PackedScene" uid="uid://jvb27aeparxr" path="res://Prefab/BoxR.tscn" id="3_1stx7"]
+[ext_resource type="PackedScene" uid="uid://baemrortkhf4r" path="res://Prefab/Bomb.tscn" id="4_evqau"]
 
 [sub_resource type="Animation" id="Animation_23ptd"]
 resource_name = "Bla"
@@ -12,7 +15,7 @@ _data = {
 
 [node name="Spawner" type="Node3D" unique_id=1398571445]
 script = ExtResource("1_gik5w")
-objects = Array[PackedScene]([])
+objects = Array[PackedScene]([ExtResource("2_5jbfu"), ExtResource("3_1stx7"), ExtResource("4_evqau")])
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=886724666]
 deterministic = true

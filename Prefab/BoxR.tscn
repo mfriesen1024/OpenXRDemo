@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://jvb27aeparxr"]
+
+[ext_resource type="PackedScene" uid="uid://mosvmm8j08v1" path="res://Prefab/BoxL.tscn" id="1_203m2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5sa7"]
+albedo_color = Color(0.20791982, 0.7402851, 0.9063355, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_203m2"]
+material = SubResource("StandardMaterial3D_o5sa7")
+
+[node name="BoxR" unique_id=1260990678 instance=ExtResource("1_203m2")]
+saberId = 1
+
+[node name="MeshInstance3D" parent="Area3D" parent_id_path=PackedInt32Array(12443144) index="1" unique_id=18073666]
+mesh = SubResource("BoxMesh_203m2")
