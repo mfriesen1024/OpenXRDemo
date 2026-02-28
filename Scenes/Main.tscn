@@ -20,12 +20,12 @@ tonemap_mode = 3
 [node name="Node" type="Node" unique_id=1351839141]
 script = ExtResource("1_r150o")
 
-[node name="Spawner" parent="." unique_id=1398571445 instance=ExtResource("2_rgh2o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -32)
-
 [node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=711892617]
 
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=173569009]
+
+[node name="Spawner" parent="XROrigin3D/XRCamera3D" unique_id=1398571445 instance=ExtResource("2_rgh2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -32)
 
 [node name="XRController3D" type="XRController3D" parent="XROrigin3D" unique_id=1006845066]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, -2)
