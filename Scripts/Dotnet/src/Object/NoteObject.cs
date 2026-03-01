@@ -1,3 +1,4 @@
+using CloneSaber.Scripts.Dotnet.Core;
 using Godot;
 
 namespace CloneSaber.Scripts.Dotnet.Object;
@@ -15,6 +16,8 @@ public abstract partial class NoteObject:Node3D
     public override void _Ready()
     {
         startPos = Position;
+        
+        EventSystem.ScoreUpdated += DeleteOnHit;
     }
     
     public override void _PhysicsProcess(double delta)
@@ -33,5 +36,11 @@ public abstract partial class NoteObject:Node3D
         var newPos = startPos.Lerp(tPos,(float)(timeAlive * (1 / approachRate)));
         
         Position = newPos;
+    }
+    
+    void DeleteOnHit(Vector3 pos, bool isPositive)
+    {
+        EventSystem.ScoreUpdated -= DeleteOnHit;
+        QueueFree();
     }
 }
