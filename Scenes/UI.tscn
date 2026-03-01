@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://40o8rmeieg2m" path="res://Scripts/Dotnet/src/UI/ScoreDisplay.cs" id="1_w371h"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_w371h"]
+font_size = 28
+
 [node name="UI" type="Control" unique_id=519518412]
 layout_mode = 3
 anchors_preset = 15
@@ -14,6 +17,8 @@ grow_vertical = 2
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_w371h")
 script = ExtResource("1_w371h")
 
 [node name="Credits" type="Label" parent="." unique_id=1656923687]
@@ -27,4 +32,5 @@ offset_left = -40.0
 offset_top = -23.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "Music: DM DOKURO - Scourge of the Universe (Eulogy for the Ego)"
+text = "Music: DM DOKURO - Ubiversal Collapse"
+label_settings = SubResource("LabelSettings_w371h")
