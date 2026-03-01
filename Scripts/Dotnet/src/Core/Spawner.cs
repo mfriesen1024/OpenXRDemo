@@ -20,7 +20,7 @@ public partial class Spawner:Node3D
     {
         GD.Print($"Spawning {objectIndex}");
         var node = objects[objectIndex].Instantiate() as Node3D;
-        AddChild(node);
         node.Position = pos;
+        AddChild(node);
     }
 }
