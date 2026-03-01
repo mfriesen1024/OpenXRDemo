@@ -3,8 +3,12 @@
 [ext_resource type="Script" uid="uid://t5qsubrslry4" path="res://Scripts/GDScript/XRInit.gd" id="1_r150o"]
 [ext_resource type="PackedScene" uid="uid://bo504gqxy67w7" path="res://Model/Reimport/Saber-L.tscn" id="2_kln2b"]
 [ext_resource type="PackedScene" uid="uid://njqrxfpyw23j" path="res://Scenes/Spawner.tscn" id="2_rgh2o"]
+[ext_resource type="PackedScene" uid="uid://2ii6e0lt3nyx" path="res://Scenes/UI.tscn" id="2_v1gob"]
 [ext_resource type="PackedScene" uid="uid://bjrtf850l6ij2" path="res://Model/Reimport/Saber-R.tscn" id="3_rgh2o"]
 [ext_resource type="AudioStream" uid="uid://ctk3b8kdd8cwr" path="res://audio.ogg" id="5_pbw6q"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_v1gob"]
+viewport_path = NodePath("XROrigin3D/XRCamera3D/Sprite3D/SubViewport")
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r150o"]
 
@@ -26,6 +30,17 @@ script = ExtResource("1_r150o")
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=173569009]
 
 [node name="Spawner" parent="XROrigin3D/XRCamera3D" unique_id=1398571445 instance=ExtResource("2_rgh2o")]
+
+[node name="Sprite3D" type="Sprite3D" parent="XROrigin3D/XRCamera3D" unique_id=2010593983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+pixel_size = 0.004
+texture = SubResource("ViewportTexture_v1gob")
+
+[node name="SubViewport" type="SubViewport" parent="XROrigin3D/XRCamera3D/Sprite3D" unique_id=649941784]
+transparent_bg = true
+size = Vector2i(1280, 720)
+
+[node name="UI" parent="XROrigin3D/XRCamera3D/Sprite3D/SubViewport" unique_id=519518412 instance=ExtResource("2_v1gob")]
 
 [node name="XRController3D" type="XRController3D" parent="XROrigin3D" unique_id=1006845066]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, -2)
