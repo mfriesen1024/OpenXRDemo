@@ -13,7 +13,11 @@ public abstract partial class NoteObject:Node3D
     {
         timeAlive += delta;
 
-        if (timeAlive > 1.5) return;
+        if (timeAlive > 1.5)
+        {
+            QueueFree();
+            return;
+        }
         var tPos = Position;
         var node3D = GetParent() as Node3D;
         tPos.Z = -node3D.Position.Z;
