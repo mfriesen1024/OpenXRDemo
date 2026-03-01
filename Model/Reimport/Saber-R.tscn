@@ -7,8 +7,9 @@
 size = Vector3(0.17320508, 5, 0.2)
 
 [node name="Saber" unique_id=1124808625 instance=ExtResource("1_uftpl")]
+transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, 0.25, 0, -0.25, -1.0927847e-08, 0, 0, 0)
 
-[node name="Blade" parent="Hilt" parent_id_path=PackedInt32Array(944607645) index="0" unique_id=1626408523]
+[node name="Blade" parent="Hilt" parent_id_path=PackedInt32Array(1104333729) index="0" unique_id=1381871698]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Area3D" type="Area3D" parent="Hilt/Blade" index="0" unique_id=1936395595]
@@ -19,7 +20,7 @@ saberID = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
 shape = SubResource("BoxShape3D_uftpl")
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=1902857100]
+[node name="AnimationPlayer" parent="." index="1" unique_id=1297865460]
 autoplay = &"BladeAction"
 
 [connection signal="area_entered" from="Hilt/Blade/Area3D" to="Hilt/Blade/Area3D" method="OnTriggerEnter"]
