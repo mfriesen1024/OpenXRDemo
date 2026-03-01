@@ -13,10 +13,13 @@ public abstract partial class NoteObject:Node3D
     {
         timeAlive += delta;
 
-        if (timeAlive > 1) return;
+        if (timeAlive > 1.5) return;
         var tPos = Position;
-        tPos.Z = -(GetParent() as Node3D).Position.Z;
+        var node3D = GetParent() as Node3D;
+        tPos.Z = -node3D.Position.Z;
 
-        Position = Position.Lerp(tPos,(float)(timeAlive * 1 / 0.6));
+        var newPos = Position.Lerp(tPos,(float)(timeAlive * (1 / 1.5)));
+        
+        Position = newPos;
     }
 }

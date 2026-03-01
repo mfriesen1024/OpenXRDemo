@@ -24,13 +24,13 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
+tracks/1/path = NodePath(".:pos")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(7.77, 7.7701, 8.37, 8.3701, 8.97, 8.9701),
+"times": PackedFloat32Array(7.77, 7.7833333, 8.37, 8.383333, 8.97, 8.983334),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
+"update": 1,
 "values": [Vector3(3, -1.5, 0), Vector3(1, 1.5, 0), Vector3(-3, 0, 0), Vector3(1, 1.5, 0), Vector3(1, 1.5, 0), Vector3(-1, -1.5, 0)]
 }
 tracks/2/type = "method"
@@ -40,7 +40,7 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(7.77, 7.7701, 8.37, 8.3701, 8.97, 8.9701),
+"times": PackedFloat32Array(7.77, 7.7833333, 8.37, 8.383333, 8.97, 8.983334),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "values": [{
 "args": [],
@@ -77,18 +77,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [0]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(3, -1.5, 0)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l42d4"]
 _data = {
@@ -99,7 +87,6 @@ _data = {
 [node name="Spawner" type="Node3D" unique_id=1398571445]
 script = ExtResource("1_gik5w")
 objects = Array[PackedScene]([ExtResource("2_5jbfu"), ExtResource("3_1stx7"), ExtResource("4_evqau")])
-position = Vector3(3, -1.5, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=886724666]
 deterministic = true
