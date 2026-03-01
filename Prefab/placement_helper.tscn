@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://ujfkkr05xbfp"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_5jbfu"]
+
+[node name="PlacementHelper" type="Node3D" unique_id=2100000163]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1776701152]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+mesh = SubResource("SphereMesh_5jbfu")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=90293682]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+mesh = SubResource("SphereMesh_5jbfu")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=700092142]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+mesh = SubResource("SphereMesh_5jbfu")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1982678032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = SubResource("SphereMesh_5jbfu")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1685788144]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1.5, 0)
+mesh = SubResource("SphereMesh_5jbfu")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=491597903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -1.5, 0)
+mesh = SubResource("SphereMesh_5jbfu")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="." unique_id=770391440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1.5, 0)
+mesh = SubResource("SphereMesh_5jbfu")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="." unique_id=1324554387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1.5, 0)
+mesh = SubResource("SphereMesh_5jbfu")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="." unique_id=276073317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.5, 0)
+mesh = SubResource("SphereMesh_5jbfu")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="." unique_id=1291846576]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.5, 0)
+mesh = SubResource("SphereMesh_5jbfu")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="." unique_id=1025405484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.5, 0)
+mesh = SubResource("SphereMesh_5jbfu")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="." unique_id=1394292630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5, 0)
+mesh = SubResource("SphereMesh_5jbfu")
