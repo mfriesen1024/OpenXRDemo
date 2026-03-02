@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://2ii6e0lt3nyx" path="res://Scenes/UI.tscn" id="2_v1gob"]
 [ext_resource type="PackedScene" uid="uid://bjrtf850l6ij2" path="res://Model/Reimport/Saber-R.tscn" id="3_rgh2o"]
 [ext_resource type="AudioStream" uid="uid://ctk3b8kdd8cwr" path="res://audio.ogg" id="5_pbw6q"]
+[ext_resource type="AudioStream" uid="uid://bvhtk0s7ho3r7" path="res://normal-hitnormal75.wav" id="7_jw32o"]
+[ext_resource type="Script" uid="uid://bffbxubbffyc3" path="res://Scripts/Dotnet/src/Core/HitsoundPlayer.cs" id="8_50glp"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_v1gob"]
 viewport_path = NodePath("XROrigin3D/XRCamera3D/Sprite3D/SubViewport")
@@ -57,6 +59,10 @@ tracker = &"right_hand"
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=801517527]
 environment = SubResource("Environment_idj7w")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1789262457]
+[node name="MainAudioPlayer" type="AudioStreamPlayer" parent="." unique_id=1789262457]
 stream = ExtResource("5_pbw6q")
 autoplay = true
+
+[node name="HSPlayer" type="AudioStreamPlayer" parent="." unique_id=1958526525]
+stream = ExtResource("7_jw32o")
+script = ExtResource("8_50glp")
