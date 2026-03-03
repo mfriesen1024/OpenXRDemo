@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c02vg5oauogpj"]
+
+[ext_resource type="AudioStream" uid="uid://bvhtk0s7ho3r7" path="res://normal-hitnormal75.wav" id="1_ryayl"]
+[ext_resource type="Script" uid="uid://bffbxubbffyc3" path="res://Scripts/Dotnet/src/Core/HitsoundPlayer.cs" id="2_45ivw"]
+
+[node name="HSPlayer" type="AudioStreamPlayer3D" unique_id=202397499]
+stream = ExtResource("1_ryayl")
+autoplay = true
+script = ExtResource("2_45ivw")

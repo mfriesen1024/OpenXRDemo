@@ -6,13 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://jlp05unh3u7b" path="res://Scenes/World.tscn" id="2_vy5pj"]
 [ext_resource type="PackedScene" uid="uid://c56r7roh6n00v" path="res://Prefab/MusicPlayer.tscn" id="3_bmxlf"]
 [ext_resource type="PackedScene" uid="uid://bjrtf850l6ij2" path="res://Model/Reimport/Saber-R.tscn" id="3_rgh2o"]
-[ext_resource type="AudioStream" uid="uid://bvhtk0s7ho3r7" path="res://normal-hitnormal75.wav" id="7_jw32o"]
-[ext_resource type="Script" uid="uid://bffbxubbffyc3" path="res://Scripts/Dotnet/src/Core/HitsoundPlayer.cs" id="8_50glp"]
+[ext_resource type="PackedScene" uid="uid://c02vg5oauogpj" path="res://Prefab/HSPlayer.tscn" id="4_jw32o"]
 
 [node name="Node" type="Node" unique_id=1351839141 node_paths=PackedStringArray("Camera")]
 script = ExtResource("1_50glp")
 WorldScene = ExtResource("2_vy5pj")
 MusicPrefab = ExtResource("3_bmxlf")
+HitsoundPrefab = ExtResource("4_jw32o")
 Camera = NodePath("XROrigin3D/XRCamera3D")
 
 [node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=711892617]
@@ -31,7 +31,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, -2)
 tracker = &"right_hand"
 
 [node name="Saber" parent="XROrigin3D/XRController3D2" unique_id=1405342367 instance=ExtResource("3_rgh2o")]
-
-[node name="HSPlayer" type="AudioStreamPlayer" parent="." unique_id=1958526525]
-stream = ExtResource("7_jw32o")
-script = ExtResource("8_50glp")

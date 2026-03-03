@@ -16,22 +16,25 @@ reflected_light_source = 2
 tonemap_mode = 3
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_v1gob"]
-viewport_path = NodePath("WorldEnv/Sprite3D/SubViewport")
+viewport_path = NodePath("TransformParent/Sprite3D/SubViewport")
 
 [node name="WorldRoot" type="Node3D" unique_id=1028506350]
 
 [node name="WorldEnv" type="WorldEnvironment" parent="." unique_id=1453834469]
 environment = SubResource("Environment_idj7w")
 
-[node name="Spawner" parent="WorldEnv" unique_id=1398571445 instance=ExtResource("1_j0p05")]
+[node name="TransformParent" type="Node3D" parent="." unique_id=1245275727]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="Sprite3D" type="Sprite3D" parent="WorldEnv" unique_id=1422566403]
+[node name="Spawner" parent="TransformParent" unique_id=1398571445 instance=ExtResource("1_j0p05")]
+
+[node name="Sprite3D" type="Sprite3D" parent="TransformParent" unique_id=1422566403]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
 pixel_size = 0.004
 texture = SubResource("ViewportTexture_v1gob")
 
-[node name="SubViewport" type="SubViewport" parent="WorldEnv/Sprite3D" unique_id=489730847]
+[node name="SubViewport" type="SubViewport" parent="TransformParent/Sprite3D" unique_id=489730847]
 transparent_bg = true
 size = Vector2i(1280, 720)
 
-[node name="UI" parent="WorldEnv/Sprite3D/SubViewport" unique_id=519518412 instance=ExtResource("2_5nsto")]
+[node name="UI" parent="TransformParent/Sprite3D/SubViewport" unique_id=519518412 instance=ExtResource("2_5nsto")]

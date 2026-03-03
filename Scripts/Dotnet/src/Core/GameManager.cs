@@ -9,7 +9,7 @@ internal partial class GameManager:Node
 {
     public static GameManager Instance { get; set; }
     
-    [Export] PackedScene WorldScene, MusicPrefab;
+    [Export] PackedScene WorldScene, MusicPrefab, HitsoundPrefab;
     [Export] XRCamera3D Camera;
     [Export] public double ApproachRate = 0.9;
 
@@ -20,15 +20,18 @@ internal partial class GameManager:Node
     {
         Instance = this;
 
-        var world = WorldScene.Instantiate() as Node3D;
-        world.Ready += OnWorldInit;
-        AddChild(world);
+        EventSystem.ScoreUpdated += EventSystemOnScoreUpdated;
 
-        void OnWorldInit()
-        {
-            world.GlobalBasis = Camera.GlobalBasis;
-            world.GlobalPosition = Camera.GlobalPosition;
-        }
+        var world = WorldScene.Instantiate() as Node3D;
+        Camera.AddChild(world);
+        world.Reparent(this);
+    }
+
+    void EventSystemOnScoreUpdated(Vector3 pos, bool isPositive)
+    {
+        var hitsound = HitsoundPrefab.Instantiate() as Node3D;
+        AddChild(hitsound);
+        hitsound.GlobalPosition = pos;
     }
 
     public override void _PhysicsProcess(double delta)

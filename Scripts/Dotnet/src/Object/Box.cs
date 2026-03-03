@@ -15,6 +15,6 @@ public partial class Box:NoteObject
 
     public override void Bonk()
     {
-        EventSystem.InvokeScoreMod(Position,false);
+        EventSystem.InvokeScoreMod(GlobalPosition,false);
     }
 }
