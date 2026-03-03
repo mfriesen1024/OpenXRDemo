@@ -21,8 +21,14 @@ internal partial class GameManager:Node
         Instance = this;
 
         var world = WorldScene.Instantiate() as Node3D;
-        world.GlobalBasis = Camera.GlobalBasis;
-        world.GlobalPosition = Camera.GlobalPosition;
+        world.Ready += OnWorldInit;
+        AddChild(world);
+
+        void OnWorldInit()
+        {
+            world.GlobalBasis = Camera.GlobalBasis;
+            world.GlobalPosition = Camera.GlobalPosition;
+        }
     }
 
     public override void _PhysicsProcess(double delta)
