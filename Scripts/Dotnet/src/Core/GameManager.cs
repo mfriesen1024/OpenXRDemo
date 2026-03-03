@@ -29,6 +29,7 @@ internal partial class GameManager:Node
 
     void EventSystemOnScoreUpdated(Vector3 pos, bool isPositive)
     {
+        if(!isPositive)  return;
         var hitsound = HitsoundPrefab.Instantiate() as Node3D;
         AddChild(hitsound);
         hitsound.GlobalPosition = pos;
