@@ -14,6 +14,7 @@ WorldScene = ExtResource("2_vy5pj")
 MusicPrefab = ExtResource("3_bmxlf")
 HitsoundPrefab = ExtResource("4_jw32o")
 Camera = NodePath("XROrigin3D/XRCamera3D")
+ApproachRate = 0.75
 
 [node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=711892617]
 script = ExtResource("1_r150o")
@@ -25,6 +26,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, -2)
 tracker = &"left_hand"
 
 [node name="Saber" parent="XROrigin3D/XRController3D" unique_id=1752899289 instance=ExtResource("2_kln2b")]
+transform = Transform3D(0.25, 0, 0, 0, -1.7484556e-08, 0.25, 0, -0.4, -1.0927847e-08, 0, 0, 0)
 
 [node name="XRController3D2" type="XRController3D" parent="XROrigin3D" unique_id=1034809561]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, -2)
