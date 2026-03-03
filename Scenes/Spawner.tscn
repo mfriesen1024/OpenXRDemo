@@ -16,7 +16,7 @@ tracks/0/path = NodePath(".:objectIndex")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 7.166667, 7.766667, 8.366667, 8.663334, 8.8133335, 8.963335, 8.996668),
+"times": PackedFloat32Array(0, 7.75, 8.35, 8.95, 9.246667, 9.396667, 9.546668, 9.580001),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 0, 1, 0, 1, 1, 0]
@@ -28,7 +28,7 @@ tracks/1/path = NodePath(".:pos")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 7.166667, 7.1800003, 7.766667, 7.78, 8.366667, 8.380001, 8.663334, 8.8133335, 8.963335, 8.980001, 8.996668, 9.013334),
+"times": PackedFloat32Array(0, 7.75, 7.7633333, 8.35, 8.363333, 8.95, 8.963334, 9.246667, 9.396667, 9.546668, 9.563334, 9.580001, 9.596667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [Vector3(-1, 0, 0), Vector3(2, -1.5, 0), Vector3(1, 1.5, 0), Vector3(-2, 0, 0), Vector3(1, 1.5, 0), Vector3(1, 1.5, 0), Vector3(-1, -1.5, 0), Vector3(-1, 0, 0), Vector3(1, 0, 0), Vector3(1, 1.5, 0), Vector3(-1, 1.5, 0), Vector3(-1, -1.5, 0), Vector3(1, -1.5, 0)]
