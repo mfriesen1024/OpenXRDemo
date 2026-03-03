@@ -16,8 +16,6 @@ public abstract partial class NoteObject:Node3D
     public override void _Ready()
     {
         startPos = Position;
-        
-        EventSystem.ScoreUpdated += DeleteOnHit;
     }
     
     public override void _PhysicsProcess(double delta)
@@ -38,7 +36,7 @@ public abstract partial class NoteObject:Node3D
         Position = newPos;
     }
     
-    void DeleteOnHit(Vector3 pos, bool isPositive)
+    protected void DeleteOnHit(Vector3 pos, bool isPositive)
     {
         EventSystem.ScoreUpdated -= DeleteOnHit;
         QueueFree();

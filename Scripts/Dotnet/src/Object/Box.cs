@@ -11,6 +11,7 @@ public partial class Box:NoteObject
     {
         bool isPositive = saberId == this.saberId;
         EventSystem.InvokeScoreMod(Position, isPositive);
+        DeleteOnHit(Position, isPositive);
     }
 
     public override void Bonk()
