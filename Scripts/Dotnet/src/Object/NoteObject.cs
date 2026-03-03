@@ -31,7 +31,7 @@ public abstract partial class NoteObject:Node3D
         }
         var tPos = Position;
         var node3D = GetParent() as Node3D;
-        tPos.Z = -node3D.Position.Z - 0.5f; // add 2m of space between us and where things should vanish.
+        tPos.Z = -node3D.Position.Z - 0.25f; // add 2m of space between us and where things should vanish.
 
         var newPos = startPos.Lerp(tPos,(float)(timeAlive * (1 / ApproachRate)));
         

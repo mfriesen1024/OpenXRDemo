@@ -18,6 +18,15 @@ tonemap_mode = 3
 [sub_resource type="ViewportTexture" id="ViewportTexture_v1gob"]
 viewport_path = NodePath("TransformParent/Sprite3D/SubViewport")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j0p05"]
+transparency = 1
+cull_mode = 2
+albedo_color = Color(1, 0.46000004, 0.100000024, 0.3254902)
+
+[sub_resource type="QuadMesh" id="QuadMesh_j0p05"]
+material = SubResource("StandardMaterial3D_j0p05")
+size = Vector2(3, 3)
+
 [node name="WorldRoot" type="Node3D" unique_id=1028506350]
 
 [node name="WorldEnv" type="WorldEnvironment" parent="." unique_id=1453834469]
@@ -38,3 +47,7 @@ transparent_bg = true
 size = Vector2i(1280, 720)
 
 [node name="UI" parent="TransformParent/Sprite3D/SubViewport" unique_id=519518412 instance=ExtResource("2_5nsto")]
+
+[node name="EndPosition" type="MeshInstance3D" parent="TransformParent" unique_id=485226182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+mesh = SubResource("QuadMesh_j0p05")
