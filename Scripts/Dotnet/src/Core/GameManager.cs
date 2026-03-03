@@ -37,5 +37,6 @@ internal partial class GameManager:Node
         if (timeAlive < ApproachRate) return;
         if (spawned) return;
         spawned = true;
+        AddChild(MusicPrefab.Instantiate());
     }
 }
