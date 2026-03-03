@@ -36,6 +36,7 @@ internal partial class GameManager:Node
     {
         timeAlive += delta;
         WorldSpawner(delta);
+        if(!spawnedWorld) return;
         MusicSpawner(delta);
     }
 
