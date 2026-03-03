@@ -3,7 +3,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var root:Window = get_parent();
+	var root:Window = get_node("/root");
 	
 	root.use_xr=true;
 	pass # Replace with function body.
