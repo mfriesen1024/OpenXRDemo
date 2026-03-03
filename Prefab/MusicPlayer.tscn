@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c56r7roh6n00v"]
+
+[ext_resource type="AudioStream" uid="uid://ctk3b8kdd8cwr" path="res://audio.ogg" id="1_f4r57"]
+
+[node name="MainAudioPlayer" type="AudioStreamPlayer" unique_id=1544627880]
+stream = ExtResource("1_f4r57")
+autoplay = true
